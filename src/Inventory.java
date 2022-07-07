@@ -2,7 +2,7 @@ public class Inventory {
 
     private boolean water, food, wood;
     private String weaponName, armorName;
-    private int damage,armor;
+    private int damage, block;
 
     public boolean isWater() {
         return water;
@@ -52,12 +52,12 @@ public class Inventory {
         this.damage = damage;
     }
 
-    public int getArmor() {
-        return armor;
+    public int getBlock() {
+        return block;
     }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
+    public void setBlock(int block) {
+        this.block = block;
     }
 
     Inventory(){
@@ -65,7 +65,7 @@ public class Inventory {
         this.food = false;
         this.wood = false;
         this.damage = 0;
-        this.armor = 0;
+        this.block = 0;
         this.weaponName = null;
         this.armorName = null;
     }

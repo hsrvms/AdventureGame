@@ -53,6 +53,9 @@ public class Player {
         setMoney(money);
         setMaxHealth(maxHealth);
     }
+    public int getTotalDamage(){
+        return this.getDamage()+this.getInventory().getDamage();
+    }
 
     public int getDamage() {
         return damage;
