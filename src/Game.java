@@ -39,11 +39,26 @@ public class Game {
                 case 1:
                     location = new SafeHouse(player);
                     break;
+                case 2:
+                    location = new Cave(player);
+                    break;
+                case 3:
+                    location = new Forest(player);
+                    break;
+                case 4:
+                    location = new River(player);
+                    break;
                 case 5:
                     location = new Store(player);
                     break;
                 default:
                     location = new SafeHouse(player);
+            }
+            if (location.getClass().getName().equalsIgnoreCase("SafeHouse")) {
+                if (player.getInventory().isWood() && player.getInventory().isWater() && player.getInventory().isFood()) {
+                    System.out.println("Congrats you are complete the game!!");
+                    break;
+                }
             }
             if (!location.getLocation()) {
                 System.out.println("Game Over!");
